@@ -32,9 +32,9 @@ module RubyCertisignLogin
       end
     end
   end
-  
-  def cert_valid?(hash)
+
+  def self.cert_valid?(hash)
     hash[:valido] and hash[:validade].to_date >= Date.today
   end
-  
+
 end
