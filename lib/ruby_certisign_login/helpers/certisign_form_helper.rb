@@ -4,7 +4,7 @@ module CertisignFormHelper
   module ActionView
 
     def certisign_form(id, name, url, method = :get)
-      menu = content_tag(:form, url: "https://autenticador.certisign.com.br/CertisignLogin/certificado/login", method: method) do 
+      menu = content_tag(:form, action: "https://autenticador.certisign.com.br/CertisignLogin/certificado/login", method: method) do 
         concat hidden_field_tag :id,      id
         concat hidden_field_tag :nome,    name
         concat hidden_field_tag :retorno, url
