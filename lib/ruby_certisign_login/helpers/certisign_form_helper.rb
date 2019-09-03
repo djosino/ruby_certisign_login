@@ -13,7 +13,7 @@ module CertisignFormHelper
         concat tag :br
         concat content_tag(:button, 
           content_tag(:img, src: CERTISIGN_LOGO, style: 'float: left; width: 30px') { concat "Login com Certificado Digital" },
-          type: :submit, class: "btn btn-default btn-block", style: "line-height: 30px; font-size: 16px;" )
+          type: :submit, class: "btn btn-default btn-block btn-certisign" )
       end
     end
 

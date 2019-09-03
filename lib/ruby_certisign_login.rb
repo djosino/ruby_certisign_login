@@ -17,7 +17,7 @@ module RubyCertisignLogin
       # Instanciar e configurar algoritmo
       decipher = OpenSSL::Cipher::AES.new(128, :CBC)
       decipher.decrypt
-      decipher.key = File.read(CERTISIGN_KEYPATH)
+      decipher.key = File.read(CERTISIGN_KEYPATH).slice(0,16)
       #decipher.iv = 16
 
       string_decoded = Base64.decode64( string.gsub("certplus", "\\\\+") )
